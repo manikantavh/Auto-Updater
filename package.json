@@ -1,0 +1,112 @@
+{
+  "name": "electron-autoupdater",
+  "version": "1.0.1",
+  "description": "Auto-update application",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder",
+    "postinstall": "electron-builder install-app-deps",
+    "release": "build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manikantavh/Auto-Updater.git"
+  },
+  "publish": [
+    "github"
+  ],
+  "author": "Manikanta",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^9.0.5",
+    "electron-builder": "^22.7.0"
+  },
+  "dependencies": {
+    "electron-updater": "^4.3.1",
+    "yarn": "^1.22.4"
+  },
+  "build": {
+    "appId": "com.autoupdater.Updater",
+    "productName": "Auto Updater",
+    "copyright": "Copyright © 2020 Manikanta",
+    "compression": "maximum",
+    "dmg": {
+      "contents": [
+        {
+          "x": 110,
+          "y": 150
+        },
+        {
+          "x": 240,
+          "y": 150,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ]
+    },
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64",
+            "ia32"
+          ]
+        },
+        {
+          "target": "nsis-web",
+          "arch": [
+            "x64",
+            "ia32"
+          ]
+        }
+      ],
+      "icon": "build/rebit.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "include": "build/installer.nsh",
+      "deleteAppDataOnUninstall": true,
+      "perMachine": false,
+      "allowElevation": true,
+      "allowToChangeInstallationDirectory": false,
+      "installerIcon": "build/installer.ico",
+      "uninstallerIcon": "build/installer.ico",
+      "installerHeader": "build/header.ico",
+      "installerSidebar": "build/installersidebar.ico",
+      "installerHeaderIcon": "build/installersidebar.ico",
+      "uninstallerSidebar": "build/installersidebar.ico",
+      "uninstallDisplayName": "${name} ${version}",
+      "license": "build/sample.txt",
+      "createStartMenuShortcut": true,
+      "createDesktopShortcut": "always"
+    },
+    "nsisWeb": {
+      "oneClick": false,
+      "include": "build/installer.nsh",
+      "deleteAppDataOnUninstall": true,
+      "perMachine": false,
+      "allowElevation": true,
+      "allowToChangeInstallationDirectory": false,
+      "installerIcon": "build/installer.ico",
+      "uninstallerIcon": "build/installer.ico",
+      "installerHeader": "build/header.ico",
+      "installerSidebar": "build/installersidebar.ico",
+      "installerHeaderIcon": "build/installersidebar.ico",
+      "uninstallerSidebar": "build/installersidebar.ico",
+      "uninstallDisplayName": "${name} ${version}",
+      "license": "build/sample.txt",
+      "createStartMenuShortcut": true,
+      "createDesktopShortcut": "always",
+      "appPackageUrl": "https://betsolonline-my.sharepoint.com/:f:/g/personal/manikanta_vh_betsol_com/Ekw25TcpICNFt50md0d9kkIBNIr93DqGSeUtVGf4n9EB7w?e=YSU2Vo"
+    }
+  }
+}
