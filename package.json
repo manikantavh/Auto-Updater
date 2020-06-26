@@ -6,7 +6,7 @@
   "scripts": {
     "start": "electron .",
     "pack": "electron-builder --dir",
-    "dist": "electron-builder",
+    "dist": "electron-builder build --publish always",
     "postinstall": "electron-builder install-app-deps",
     "release": "build"
   },
@@ -53,16 +53,9 @@
       ]
     },
     "win": {
-      "target": [
+      "target": [        
         {
           "target": "nsis",
-          "arch": [
-            "x64",
-            "ia32"
-          ]
-        },
-        {
-          "target": "nsis-web",
           "arch": [
             "x64",
             "ia32"
@@ -106,7 +99,7 @@
       "license": "build/sample.txt",
       "createStartMenuShortcut": true,
       "createDesktopShortcut": "always",
-      "appPackageUrl": "https://betsolonline-my.sharepoint.com/:f:/g/personal/manikanta_vh_betsol_com/Ekw25TcpICNFt50md0d9kkIBNIr93DqGSeUtVGf4n9EB7w?e=YSU2Vo"
+      "appPackageUrl": "https://github.com/manikantavh/Auto-Updater.git"
     }
   }
 }
