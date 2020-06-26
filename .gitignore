@@ -149,3 +149,16 @@ dist/win-unpacked/resources/app.asar
 dist/win-unpacked/resources/elevate.exe
 dist/win-unpacked/swiftshader/libEGL.dll
 dist/win-unpacked/swiftshader/libGLESv2.dll
+build/header.ico
+build/header1.ico
+build/installer.ico
+build/installer.nsh
+build/installer1.ico
+build/installersidebar.ico
+build/rebit.ico
+build/rebit1.ico
+build/sample.txt
+dist/nsis-web/electron-autoupdater-1.0.1-ia32.nsis.7z
+dist/nsis-web/electron-autoupdater-1.0.1-x64.nsis.7z
+dist/win-ia32-unpacked/resources/app-update.yml
+dist/win-unpacked/resources/app-update.yml

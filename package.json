@@ -1,18 +1,19 @@
 {
   "name": "electron-autoupdater",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Auto-update application",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
     "pack": "electron-builder --dir",
-    "dist": "electron-builder build --publish always",
+    "dist": "electron-builder --publish always",
     "postinstall": "electron-builder install-app-deps",
+    "gh_build":"electron-builder --win -p always",
     "release": "build"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/manikantavh/Auto-Updater.git"
+    "url": "https://github.com/manikantavh/Auto-Updater.git"
   },
   "publish": [
     "github"
