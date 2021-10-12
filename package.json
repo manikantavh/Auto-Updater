@@ -21,7 +21,7 @@
   "author": "Manikanta",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^9.0.5",
+    "electron": "^11.5.0",
     "electron-builder": "^22.7.0",
     "electron-log": "^4.2.2"
   },
